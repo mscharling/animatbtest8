@@ -1,0 +1,665 @@
+
+<!DOCTYPE html>
+
+<html lang="da">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>18.3. Tre-trinsreglen</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster.custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster.bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-shadow.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-punk.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-noir.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-light.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-borderless.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/micromodal.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/index.ff1ffe594081f20da1ef19478df9384b.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystyles.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/js/hoverxref.js"></script>
+    <script src="_static/js/tooltipster.bundle.min.js"></script>
+    <script src="_static/js/micromodal.min.js"></script>
+    <script src="_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Indeks" href="genindex.html" />
+    <link rel="search" title="Søg" href="search.html" />
+    <link rel="next" title="Symboler" href="symboler.html" />
+    <link rel="prev" title="18.2. Sekant og tangent" href="182sekantogtangent.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="da">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo1.svg" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Søg i dokumenterne ..." aria-label="Søg i dokumenterne ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="indledning.html">
+   Indledning
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Del 1
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="1talogalgebra.html">
+   1. Tal og algebra
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="11tallene.html">
+     1.1. Tallet 0 og negative tal
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="12approksimationer.html">
+     1.2. Approksimationer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="13regnearterne.html">
+     1.3. Regnearterne
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="14kvadratsaetninger.html">
+     1.4. Kvadratsætninger
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="15faktoriseringogkvadratkomplettering.html">
+     1.5. Faktorisering og kvadratkomplettering
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="16broeker.html">
+     1.6. Brøker
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="17potenser.html">
+     1.7. Potenser
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="18roedder.html">
+     1.8. Rødder
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="2maengdeteori_i.html">
+   2. Mængdeteori I
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="21symbolerimaengdeteorien.html">
+     2.1. Elementære mængdesymboler
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="22talmaengder.html">
+     2.2. Talmængder
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="23maengdeoperationer.html">
+     2.3. Mængdeoperationer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="24intervaller.html">
+     2.4. Intervaller
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="3ligninger.html">
+   3. Ligninger og uligheder
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="31lighedogligevaegt.html">
+     3.1. Lighed, ligevægtsprincip og ækvivalens
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="32grundmaengder.html">
+     3.2. Grundmængder
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="33enligningenubekendt.html">
+     3.3. En ligning med en ubekendt
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="34toligningertoubekendte.html">
+     3.4. To ligninger med to ubekendte
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="35grafernesmuligheder.html">
+     3.5. Grafernes muligheder
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="36andengradsligninger.html">
+     3.6. Andengradsligninger
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="37uligheder.html">
+     3.7. Uligheder
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="38numeriskeligninger.html">
+     3.8. Numeriske ligninger
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="4klassiskgeometri.html">
+   4. Klassisk geometri
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="5trigonometri.html">
+   5. Trigonometri
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="6analytiskplangeometri.html">
+   6. Analytisk plangeometri
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="7vektoreriplanet.html">
+   7. Vektorer i planet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="8funktioner_i.html">
+   8. Funktioner I
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="9denlineaerefunktion.html">
+   9. Den lineære funktion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10polynomier.html">
+   10. Polynomier
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="11funktioner_ii.html">
+   11. Funktioner II
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="111uendelighedsbegrebet.html">
+     11.1. Uendelighedsbegrebet
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="112graensevaerdier.html">
+     11.2. Grænseværdier
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="12deskriptivstatistik.html">
+   12. Deskriptiv statistik
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="121grundlaeggendebegreber.html">
+     12.1. Grundlæggende begreber
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="122grupperet.html">
+     12.2. Ugrupperede og grupperede observationer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="123statistiskedeskriptorer.html">
+     12.3. Statistiske deskriptorer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="124deskriptiveplots.html">
+     12.4. Deskriptive plots
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Del 2
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="13potensfunktionen.html">
+   13. Potensfunktionen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="14eksponentialfunktionen.html">
+   14. Eksponentialfunktionen
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="15opsparingogannuiteter.html">
+   15. Opsparing og annuiteter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="16trigonometriskefunktioner.html">
+   16. Trigonometriske funktioner
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="17funktioner_iii.html">
+   17. Funktioner III
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="18differentialregning.html">
+   18. Differentialregning
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="181infinitesimaler.html">
+     18.1. Infinitesimaler
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="182sekantogtangent.html">
+     18.2. Sekant og tangent
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     18.3. Tre-trinsreglen
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Værktøjer
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="symboler.html">
+   Symboler
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="hoverrefs.html">
+   Gloser
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Skift navigation" aria-controls="site-navigation"
+                title="Skift navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fuldskærmstilstand"
+        title="Fuldskærmstilstand"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Indhold
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#funktionstilvaekst">
+   18.3.1. Funktionstilvækst
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#differenskvotient">
+   18.3.2. Differenskvotient
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#differentialkvotient">
+   18.3.3. Differentialkvotient
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   18.3.4. Tre-trinsreglen
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="tre-trinsreglen">
+<h1><span class="section-number">18.3. </span>Tre-trinsreglen<a class="headerlink" href="#tre-trinsreglen" title="Permalink til denne overskrift">¶</a></h1>
+<p>Vi vil, inden vi opskriver tre-trinsreglen, gå i dybden med elementerne af reglen.</p>
+<p>Givet er funktionen <span class="math notranslate nohighlight">\(f\)</span>, og vi er interesseret i at finde tangentens hældning i <span class="math notranslate nohighlight">\((x_0,f(x_0))\)</span>. Vi vælger dernæst et vilkårligt nabopunkt, som vi kalder <span class="math notranslate nohighlight">\((x,f(x))\)</span>, og kigger på afstanden mellem vores to <span class="math notranslate nohighlight">\(x\)</span>-koordinater, <span class="math notranslate nohighlight">\(x_0\)</span> og det vilkårlige <span class="math notranslate nohighlight">\(x\)</span>. Denne afstand kalder vi <span class="math notranslate nohighlight">\(\Delta x\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[    \Delta x = x - x_0\]</div>
+<p><span class="math notranslate nohighlight">\(\Delta\)</span> er et græsk bogstav og udtales »delta« og bruges især i sammenhænge med afstande. Det betyder også, at vores vilkårlige punkt <span class="math notranslate nohighlight">\(x\)</span> kan udtrykkes i termer af vores interessante punkt <span class="math notranslate nohighlight">\(x_0\)</span> plus en eller anden afstand <span class="math notranslate nohighlight">\(\Delta x\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[    x = x_0 + \Delta x\]</div>
+<p>På den måde bliver vores vilkårlige nabopunkt til <span class="math notranslate nohighlight">\((x_0+\Delta x, f(x_0+\Delta x))\)</span>.</p>
+<div class="section" id="funktionstilvaekst">
+<h2><span class="section-number">18.3.1. </span>Funktionstilvækst<a class="headerlink" href="#funktionstilvaekst" title="Permalink til denne overskrift">¶</a></h2>
+<p>Vi har nu to punkter: Det interessante punkt <span class="math notranslate nohighlight">\((x_0, f(x_0))\)</span> og det vilkårlige nabopunkt <span class="math notranslate nohighlight">\((x_0+\Delta x, f(x_0+\Delta x))\)</span>. Ligesom vi kan betragte en afstand mellem vores <span class="math notranslate nohighlight">\(x\)</span>-koordinater, så kan vi også betragte afstanden mellem de korresponderende funktionsværdier. Denne afstand vil vi kalde <span class="math notranslate nohighlight">\(\Delta y\)</span> og benævne <strong>funktionstilvæksten</strong>:</p>
+<div class="math notranslate nohighlight">
+\[    \Delta y = f(x_0+\Delta x) - f(x_0)\]</div>
+</div>
+<div class="section" id="differenskvotient">
+<h2><span class="section-number">18.3.2. </span>Differenskvotient<a class="headerlink" href="#differenskvotient" title="Permalink til denne overskrift">¶</a></h2>
+<p>Mellem vores to punkter kan vi trække en sekant. Fra forrige afsnit ved vi, at sekantens hældningskoefficient kan findes ved to-punktsformlen:</p>
+<div class="math notranslate nohighlight">
+\[    a = \frac{f(x_2)-f(x_1)}{x_2-x_1}\]</div>
+<p>Bemærk, at både tæller og nævner er afstande. Sammenholder vi formlen med vores opsætning, så får vi, at sekantens hældningskoefficient kan findes ved</p>
+<div class="math notranslate nohighlight">
+\[    a = \frac{\Delta y}{\Delta x} = \frac{f(x_0+\Delta x)-f(x_0)}{\Delta x},\]</div>
+<p>hvor vi har indsat funktionstilvæksten fra før. Vi kalder</p>
+<div class="math notranslate nohighlight">
+\[    \frac{\Delta y}{\Delta x} = \frac{f(x_0+\Delta x)-f(x_0)}{\Delta x}\]</div>
+<p>for <strong>differenskvotienten</strong> og er altså blot hældningen for den sekant, der går gennem de to punkter <span class="math notranslate nohighlight">\((x_0,f(x_0))\)</span> og <span class="math notranslate nohighlight">\((x_0+\Delta x,f(x_0+\Delta x))\)</span>.</p>
+</div>
+<div class="section" id="differentialkvotient">
+<h2><span class="section-number">18.3.3. </span>Differentialkvotient<a class="headerlink" href="#differentialkvotient" title="Permalink til denne overskrift">¶</a></h2>
+<p>Nu vil vi betragte sekanten, når vi lader nabopunktet bevæge sig mod vores interessante punkt, <span class="math notranslate nohighlight">\((x_0,f(x_0))\)</span>. Til sidst, når punkterne ligger oven i hinanden, så vil sekanten blive til en tangent i punktet. Ligesom vi ikke kan adskille <span class="math notranslate nohighlight">\(1\)</span> fra <span class="math notranslate nohighlight">\(0{,}999...\)</span>, så vil vi i stedet lade nabopunktet komme infinitesimalt tæt på det interessante punkt. Måden vi gør det, er ved at lade afstanden <span class="math notranslate nohighlight">\(\Delta x\)</span> blive mindre og mindre, og til sidst infinitesimal. Sagt på en anden måde, vi vil lade <span class="math notranslate nohighlight">\(\Delta x\)</span> gå mod 0.</p>
+<p>Eftersom det er tangenthældningen i punktet <span class="math notranslate nohighlight">\((x_0,f(x_0))\)</span>, vi er interesseret i, så skal vi altså blot betragte differenskvotienten <span class="math notranslate nohighlight">\(\frac{\Delta y}{\Delta x}\)</span>, når <span class="math notranslate nohighlight">\(\Delta x\)</span> går mod 0:</p>
+<div class="math notranslate nohighlight">
+\[    \lim_{\Delta x \rightarrow 0} \frac{\Delta y}{\Delta x}\]</div>
+<p>Denne grænse kaldes for <strong>differentialkvotienten</strong>. Tangentens hældning til grafen i <span class="math notranslate nohighlight">\(x_0\)</span> vil også afhænge af, hvad det interessante punkt er. Derfor er differentialkvotienten igen en funktion:</p>
+<div class="math notranslate nohighlight">
+\[    f'(x_0) = \lim_{\Delta x \rightarrow 0} \frac{\Delta y}{\Delta x} \]</div>
+<p>Vi udtaler <span class="math notranslate nohighlight">\(f'(x_0)\)</span> som »<span class="math notranslate nohighlight">\(f\)</span> mærke af <span class="math notranslate nohighlight">\(x_0\)</span>«. <span class="math notranslate nohighlight">\(f'(x_0)\)</span> er altså tangentens hældning til grafen i punktet <span class="math notranslate nohighlight">\((x_0,f(x_0))\)</span>. Men eftersom vi kan betragte ethvert punkt på grafen, så får vi altså funktionen <span class="math notranslate nohighlight">\(f'(x)\)</span>, som vi kalder den <strong>afledte funktion</strong>.</p>
+</div>
+<div class="section" id="id1">
+<h2><span class="section-number">18.3.4. </span>Tre-trinsreglen<a class="headerlink" href="#id1" title="Permalink til denne overskrift">¶</a></h2>
+<p>Vi kan nu samle de ovenstående afsnit i vores tre-trinsregel:</p>
+<div class="proof regneregler admonition" id="regneregler-0">
+<p class="admonition-title"><span class="caption-number">Regneregler 18.1 </span> (Tre-trinsreglen)</p>
+<div class="regneregler-content section" id="proof-content">
+<p><strong>Trin 1:</strong> Funktionstilvækst</p>
+<div class="math notranslate nohighlight">
+\[    \Delta y = f(x_0 + \Delta x) - f(x_0)\]</div>
+<p><strong>Trin 2:</strong> Differenskvotient</p>
+<div class="math notranslate nohighlight">
+\[    \frac{\Delta y}{\Delta x} = \frac{f(x_0 + \Delta x) - f(x_0)}{\Delta x}\]</div>
+<p><strong>Trin 3:</strong> Differentialkvotient</p>
+<div class="math notranslate nohighlight">
+\[    f'(x_0) = \lim_{\Delta x \rightarrow 0} \frac{\Delta y}{\Delta x} \]</div>
+</div>
+</div><p>Lad os kigge på nogle eksempler.</p>
+<div class="proof eksempel admonition" id="eksempel-1">
+<p class="admonition-title"><span class="caption-number">Eksempel 18.1 </span></p>
+<div class="eksempel-content section" id="proof-content">
+<p>Givet er funktionen <span class="math notranslate nohighlight">\(f(x)=x^2\)</span> og vi skal bestemme tangentens hældning i <span class="math notranslate nohighlight">\((2,f(2))\)</span>.</p>
+<p>Vi bruger tre-trinsreglen direkte med <span class="math notranslate nohighlight">\(x_0\)</span> og kan derefter indsætte <span class="math notranslate nohighlight">\(x_0 = 2\)</span>.</p>
+<p><strong>Trin 1:</strong> Funktionstilvækst</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\Delta y &amp;= f(x_0 + \Delta x) - f(x_0) \\
+    &amp;= (x_0 + \Delta x)^2 - x_0^2 \\
+    &amp;= \cancel{x_0^2} + \Delta x^2 + 2x_0\Delta x \cancel{- x_0^2} \\
+    &amp;= \Delta x^2 + 2x_0 \Delta x
+\end{align*}
+\end{split}\]</div>
+<p><strong>Trin 2:</strong> Differenskvotient</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\frac{\Delta y}{\Delta x} &amp;= \frac{f(x_0 + \Delta x) - f(x_0)}{\Delta x} \\
+    &amp;= \frac{\Delta x^2 + 2x_0 \Delta x}{\Delta x} \\
+    &amp;= \frac{\cancel{\Delta x} (\Delta x + 2x_0)}{\cancel{\Delta x}} \\
+    &amp;= \Delta x+2x_0 
+\end{align*}
+\end{split}\]</div>
+<p><strong>Trin 3:</strong> Differentialkvotient</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+f'(x_0) &amp;= \lim_{\Delta x \rightarrow 0} \frac{\Delta y}{\Delta x} \\
+    &amp;= \lim_{\Delta x \rightarrow 0} \Delta x+2x_0 \\
+    &amp;= 2x_0
+\end{split}\]</div>
+<p>Dermed er funktionen, der beskriver tangenthældningerne til grafen for <span class="math notranslate nohighlight">\(f\)</span>, givet ved <span class="math notranslate nohighlight">\(f'(x)=2x\)</span>. Tangentens hældning i <span class="math notranslate nohighlight">\((2,f(2))\)</span> må derfor være <span class="math notranslate nohighlight">\(f'(2)=2\cdot 2 = 4\)</span>.</p>
+</div>
+</div></div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="182sekantogtangent.html" title="forrige side">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">forrige</p>
+            <p class="prev-next-title"><span class="section-number">18.2. </span>Sekant og tangent</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="symboler.html" title="næste side">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">næste</p>
+        <p class="prev-next-title">Symboler</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          Ved MatAkademiet ApS<br/>
+        
+            &copy; ophavsret 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
